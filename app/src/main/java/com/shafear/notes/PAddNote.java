@@ -1,6 +1,7 @@
 package com.shafear.notes;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import com.shafear.notes.xnotes.XNote;
@@ -21,7 +22,7 @@ public class PAddNote {
 
     public void choosedSubmitNote(XNote xNote){
         MNotes mNotes = new MNotes();
-        mNotes.addNote(xNote);
+        mNotes.addNote(xNote, activity);
         new PShowNotes(activity);
 
     }

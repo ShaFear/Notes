@@ -1,6 +1,7 @@
 package com.shafear.notes;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import com.shafear.notes.xnotes.XNotes;
@@ -13,17 +14,17 @@ public class PShowNotes {
 
     public PShowNotes(Activity activity){
         this.activity = activity;
-        this.choosedShowTheNotes();
+        this.choosedShowTheNotes(activity);
     }
 
-    private void choosedShowTheNotes(){
-        XNotes xNotes = loadNotesData();
+    private void choosedShowTheNotes(Context context){
+        XNotes xNotes = loadNotesData(context);
         showNotesListScreen(xNotes);
     }
 
-    private XNotes loadNotesData() {
+    private XNotes loadNotesData(Context context) {
         MNotes mNotes = new MNotes();
-        return mNotes.loadNotesData();
+        return mNotes.loadNotesData(context);
     }
 
     private void showNotesListScreen(XNotes xNotes){
