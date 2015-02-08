@@ -3,6 +3,8 @@ package com.shafear.notes;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.shafear.notes.xnotes.XNote;
+
 /**
  * Created by shafe_000 on 2015-02-08.
  */
@@ -11,15 +13,24 @@ public class PAddNote {
 
     public PAddNote(Activity activity) {
         this.activity = activity;
-        choosedAddNote();
     }
 
-    private void choosedAddNote() {
+    public void choosedAddNote() {
         showAddNoteScreen();
     }
 
+    public void choosedSubmitNote(XNote xNote){
+        MNotes mNotes = new MNotes();
+        mNotes.addNote(xNote);
+        new PShowNotes(activity);
+
+    }
+
     private void showAddNoteScreen() {
-        Intent intent = new Intent(activity.getApplicationContext(), VAddNoteScreen.class);
+        Intent intent = new Intent(activity.getApplicationContext(), VAddNote.class);
         activity.startActivity(intent);
     }
+
+
+
 }

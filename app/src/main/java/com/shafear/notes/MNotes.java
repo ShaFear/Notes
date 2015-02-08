@@ -17,4 +17,8 @@ public class MNotes {
         notesList.add(new XNote("Notatka 2a", "notatkowa"));
         return new XNotes(notesList);
     }
+
+    public void addNote(XNote xNote){
+
+    }
 }

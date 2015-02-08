@@ -21,12 +21,8 @@
             android:label="@string/title_activity_vlista_notatek" >
         </activity>
         <activity
-            android:name=".VAddNoteScreen"
-            android:label="@string/title_activity_vadd_note_screen"
-            android:parentActivityName=".VNotesList" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shafear.notes.VNotesList" />
+            android:name=".VAddNote"
+            android:label="@string/title_activity_vadd_note" >
         </activity>
     </application>
 

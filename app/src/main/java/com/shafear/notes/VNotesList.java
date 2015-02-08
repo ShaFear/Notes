@@ -35,7 +35,13 @@ public class VNotesList extends ActionBarActivity {
     }
 
     public boolean addNote(MenuItem menuItem){
-        new PAddNote(this);
+        PAddNote pAddNote = new PAddNote(this);
+        pAddNote.choosedAddNote();
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }

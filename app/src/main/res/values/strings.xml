@@ -5,7 +5,6 @@
     <string name="action_settings">Ustawienia</string>
     <string name="title_activity_vlista_notatek">Notatki</string>
     <string name="action_addNote">Dodaj nową notatkę</string>
-    <string name="title_activity_vadd_note_screen">Dodawanie nowej notatki</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_vadd_note">Dodawanie nowej notatki</string>
 
 </resources>
