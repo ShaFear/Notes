@@ -9,10 +9,10 @@ import com.shafear.notes.xnotes.XNotes;
  * Created by shafe_000 on 2015-02-08.
  */
 public class PShowNotes {
-    private Activity activty;
+    private Activity activity;
 
     public PShowNotes(Activity activity){
-        this.activty = activity;
+        this.activity = activity;
         this.choosedShowTheNotes();
     }
 
@@ -27,9 +27,9 @@ public class PShowNotes {
     }
 
     private void showNotesListScreen(XNotes xNotes){
-        Intent intent = new Intent(activty.getApplicationContext(), VNotesList.class);
+        Intent intent = new Intent(activity.getApplicationContext(), VNotesList.class);
         intent.putExtra("X_NOTES" ,xNotes);
-        activty.startActivity(intent);
+        activity.startActivity(intent);
     }
 
 }

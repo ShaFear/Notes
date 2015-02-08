@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shafear.notes.VNotesList">
+
+    <!-- zmien ikonke na "ic_menu_add" -->
+    <item android:id="@+id/action_addNote"
+        android:icon="@drawable/abc_ic_menu_paste_mtrl_am_alpha"
+        android:title="@string/action_addNote"
+        app:showAsAction="ifRoom"
+        android:onClick="addNote"
+        />
+
+</menu>

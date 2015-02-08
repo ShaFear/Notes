@@ -1,8 +1,11 @@
 package com.shafear.notes;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.shafear.notes.xnotes.XNotes;
@@ -20,7 +23,7 @@ public class VNotesList extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_vlista_notatek, menu);
+        getMenuInflater().inflate(R.menu.menu_vnotes_list, menu);
         return true;
     }
 
@@ -29,5 +32,10 @@ public class VNotesList extends ActionBarActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, xNotes.getListaNotatek());
         listView.setAdapter(arrayAdapter);
+    }
+
+    public boolean addNote(MenuItem menuItem){
+        new PAddNote(this);
+        return true;
     }
 }
