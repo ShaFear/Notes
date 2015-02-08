@@ -1,11 +1,9 @@
 package com.shafear.notes;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import com.shafear.notes.xnotes.XNotes;
@@ -42,6 +40,5 @@ public class VNotesList extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-
     }
 }
