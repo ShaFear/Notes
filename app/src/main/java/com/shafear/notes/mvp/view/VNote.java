@@ -3,9 +3,13 @@ package com.shafear.notes.mvp.view;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.shafear.notes.R;
+import com.shafear.notes.mvp.presenter.PDeleteNote;
 import com.shafear.notes.xnotes.XNote;
 
 public class VNote extends ActionBarActivity {
@@ -22,4 +26,20 @@ public class VNote extends ActionBarActivity {
         contentTextView.setMovementMethod(new ScrollingMovementMethod());
         titleTextView.setMovementMethod(new ScrollingMovementMethod());
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_vnote, menu);
+        return true;
+    }
+
+    public boolean deleteNote(MenuItem menuItem){
+        PDeleteNote deleteNote = new PDeleteNote();
+        int position = (int) getIntent().getSerializableExtra("POSITION");
+        Log.d(new Integer(position).toString(), new Integer(position).toString());
+        deleteNote.delete(position);
+        finish();
+        return true;
+    }
+
 }

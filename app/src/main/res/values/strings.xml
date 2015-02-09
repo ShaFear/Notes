@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Notatki</string>
-    <string name="action_settings">Ustawienia</string>
-    <string name="title_activity_vlista_notatek">Notatki</string>
-    <string name="action_addNote">Dodaj nową notatkę</string>
+    <string name="app_name">Notatnik</string>
+    <string name="title_activity_vlista_notatek">Lista notatek</string>
+    <string name="action_addNote">Dodawanie nowej notatki</string>
     <string name="title_activity_vadd_note">Dodawanie nowej notatki</string>
     <string name="title_activity_vnote">Notatka</string>
+    <string name="action_deleteNote">Usuń notatkę</string>
 
 </resources>

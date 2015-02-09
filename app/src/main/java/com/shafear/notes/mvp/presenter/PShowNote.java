@@ -16,6 +16,7 @@ public class PShowNote {
         XNote xNote = mNotes.loadNoteData(position);
         Intent intent = new Intent(G.ACTIVITY.getApplicationContext(), VNote.class);
         intent.putExtra("X_NOTE" ,xNote);
+        intent.putExtra("POSITION" ,position);
         G.ACTIVITY.startActivity(intent);
     }
 }
