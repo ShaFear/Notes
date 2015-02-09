@@ -28,7 +28,6 @@ public class MNotesLoad {
         String title = "";
         String content = "";
         for(int j=0; j < notes.length; j++){
-            System.err.println(notes[j]);
             if(notes[j].contains("</TITLE>")) dlf.TITLE_FLAG = false;
             if(dlf.TITLE_FLAG){
                 title += notes[j];
@@ -44,7 +43,7 @@ public class MNotesLoad {
             if(notes[j].contains("</NOTE>")) {dlf.NOTE_FLAG = false; dlf.wasLastNoteFlagTrue = true;};
 
             if((dlf.NOTE_FLAG == false)&&(dlf.wasLastNoteFlagTrue)){
-                notesList.add(new XNote(dlf.noteCounter + ": " + title, content));
+                notesList.add(new XNote(title, content));
                 title = "";
                 content = "";
                 dlf.wasLastNoteFlagTrue = false;

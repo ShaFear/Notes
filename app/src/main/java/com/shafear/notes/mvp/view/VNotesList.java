@@ -4,11 +4,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.shafear.notes.mvp.presenter.PAddNote;
 import com.shafear.notes.R;
+import com.shafear.notes.mvp.presenter.PShowNote;
 import com.shafear.notes.xnotes.XNotes;
 
 
@@ -33,6 +36,13 @@ public class VNotesList extends ActionBarActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, xNotes.getListaNotatek());
         listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                PShowNote pShowNote = new PShowNote();
+                pShowNote.showNote(position);
+            }
+        });
     }
 
     public boolean addNote(MenuItem menuItem){

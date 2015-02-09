@@ -24,6 +24,10 @@
             android:name=".mvp.view.VAddNote"
             android:label="@string/title_activity_vadd_note" >
         </activity>
+        <activity
+            android:name=".mvp.view.VNote"
+            android:label="@string/title_activity_vnote">
+        </activity>
     </application>
 
 </manifest>

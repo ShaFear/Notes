@@ -6,5 +6,6 @@
     <string name="title_activity_vlista_notatek">Notatki</string>
     <string name="action_addNote">Dodaj nową notatkę</string>
     <string name="title_activity_vadd_note">Dodawanie nowej notatki</string>
+    <string name="title_activity_vnote">Notatka</string>
 
 </resources>
