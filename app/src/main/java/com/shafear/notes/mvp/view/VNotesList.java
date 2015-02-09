@@ -1,4 +1,4 @@
-package com.shafear.notes;
+package com.shafear.notes.mvp.view;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.shafear.notes.mvp.presenter.PAddNote;
+import com.shafear.notes.R;
 import com.shafear.notes.xnotes.XNotes;
 
 
@@ -33,7 +36,7 @@ public class VNotesList extends ActionBarActivity {
     }
 
     public boolean addNote(MenuItem menuItem){
-        PAddNote pAddNote = new PAddNote(this);
+        PAddNote pAddNote = new PAddNote();
         pAddNote.choosedAddNote();
         return true;
     }

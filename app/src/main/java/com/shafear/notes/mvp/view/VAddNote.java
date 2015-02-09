@@ -1,13 +1,11 @@
-package com.shafear.notes;
+package com.shafear.notes.mvp.view;
 
-import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import com.shafear.notes.mvp.presenter.PAddNote;
 import com.shafear.notes.R;
 import com.shafear.notes.xnotes.XNote;
 
@@ -20,7 +18,7 @@ public class VAddNote extends ActionBarActivity {
     }
 
     public void saveNewNote(View view) {
-        PAddNote pAddNote = new PAddNote(this);
+        PAddNote pAddNote = new PAddNote();
         XNote xNewNote = getNewNoteInformationFromEditTextFields();
         pAddNote.choosedSubmitNote(xNewNote);
         finish();
