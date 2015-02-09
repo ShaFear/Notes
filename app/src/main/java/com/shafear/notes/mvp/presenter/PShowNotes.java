@@ -17,18 +17,17 @@ public class PShowNotes {
     }
 
     private void choosedShowTheNotes(){
-        XNotes xNotes = loadNotesData();
-        showNotesListScreen(xNotes);
+        //XNotes xNotes = loadNotesData();
+        //showNotesListScreen(xNotes);
     }
 
-    private XNotes loadNotesData() {
+    public XNotes loadNotesData() {
         MNotes mNotes = new MNotes();
         return mNotes.loadNotesData();
     }
 
-    private void showNotesListScreen(XNotes xNotes){
+    public void showNotesListScreen(){
         Intent intent = new Intent(G.ACTIVITY.getApplicationContext(), VNotesList.class);
-        intent.putExtra("X_NOTES" ,xNotes);
         G.ACTIVITY.startActivity(intent);
     }
 

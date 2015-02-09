@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".mvp.view.VEntryScreen"
+            android:name=".mvp.view.VNotesList"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,10 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".mvp.view.VNotesList"
-            android:label="@string/title_activity_vlista_notatek" >
-        </activity>
+
         <activity
             android:name=".mvp.view.VAddNote"
             android:label="@string/title_activity_vadd_note" >

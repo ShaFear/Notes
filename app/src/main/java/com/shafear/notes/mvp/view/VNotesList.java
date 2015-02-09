@@ -9,19 +9,25 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.shafear.notes.global.G;
 import com.shafear.notes.mvp.presenter.PAddNote;
 import com.shafear.notes.R;
 import com.shafear.notes.mvp.presenter.PShowNote;
+import com.shafear.notes.mvp.presenter.PShowNotes;
 import com.shafear.notes.xnotes.XNotes;
 
 
 
 public class VNotesList extends ActionBarActivity {
 
+    private PShowNotes pShowNotes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        G.ACTIVITY = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vnotes_list);
+        pShowNotes = new PShowNotes();
         setListViewOfNotes();
     }
 
@@ -32,7 +38,7 @@ public class VNotesList extends ActionBarActivity {
     }
 
     private void setListViewOfNotes() {
-        XNotes xNotes = (XNotes) getIntent().getSerializableExtra("X_NOTES");
+        XNotes xNotes = pShowNotes.loadNotesData();
         ListView listView = (ListView) findViewById(R.id.listView);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, xNotes.getListaNotatek());
         listView.setAdapter(arrayAdapter);

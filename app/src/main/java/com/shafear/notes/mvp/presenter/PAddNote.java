@@ -18,8 +18,8 @@ public class PAddNote {
     public void choosedSubmitNote(XNote xNote){
         MNotes mNotes = new MNotes();
         mNotes.addNote(xNote);
-        new PShowNotes();
-
+        PShowNotes pShowNotes = new PShowNotes();
+        pShowNotes.showNotesListScreen();
     }
 
     private void showAddNoteScreen() {

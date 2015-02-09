@@ -2,6 +2,7 @@ package com.shafear.notes.mvp.view;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 import com.shafear.notes.R;
@@ -18,5 +19,7 @@ public class VNote extends ActionBarActivity {
         TextView contentTextView = (TextView) findViewById(R.id.textView6);
         titleTextView.setText(xNote.getTitle());
         contentTextView.setText(xNote.getContent());
+        contentTextView.setMovementMethod(new ScrollingMovementMethod());
+        titleTextView.setMovementMethod(new ScrollingMovementMethod());
     }
 }
