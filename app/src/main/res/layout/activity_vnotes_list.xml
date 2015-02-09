@@ -2,11 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#fffff5b6">
 
     <ListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView" />
+        android:id="@+id/listView"
+        android:touchscreenBlocksFocus="false"
+        android:textFilterEnabled="false"
+        android:background="#fffff5b6" />
 
 </LinearLayout>

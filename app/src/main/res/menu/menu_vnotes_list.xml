@@ -5,7 +5,7 @@
 
     <!-- zmien ikonke na "ic_menu_add" -->
     <item android:id="@+id/action_addNote"
-        android:icon="@drawable/abc_ic_menu_paste_mtrl_am_alpha"
+        android:icon="@drawable/ic_menu_add"
         android:title="@string/action_addNote"
         app:showAsAction="ifRoom"
         android:onClick="addNote"
