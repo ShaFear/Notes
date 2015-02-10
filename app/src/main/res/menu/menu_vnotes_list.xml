@@ -9,6 +9,7 @@
         android:title="@string/action_addNote"
         app:showAsAction="ifRoom"
         android:onClick="addNote"
+
         />
 
 </menu>

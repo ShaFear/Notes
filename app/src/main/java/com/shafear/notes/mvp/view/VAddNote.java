@@ -15,6 +15,7 @@ public class VAddNote extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vadd_note);
+        VAddLib.setColorForActionBarTitleText(this, "#edc437", getString(R.string.title_activity_vadd_note));
     }
 
     public void saveNewNote(View view) {

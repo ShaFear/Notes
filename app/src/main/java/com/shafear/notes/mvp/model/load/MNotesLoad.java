@@ -28,14 +28,22 @@ public class MNotesLoad {
         String title = "";
         String content = "";
         for(int j=0; j < notes.length; j++){
-            if(notes[j].contains("</TITLE>")) dlf.TITLE_FLAG = false;
+            if(notes[j].contains("</TITLE>")) {
+                if(title.length() > 0)
+                    title = title.substring(0, title.length()-1);
+                dlf.TITLE_FLAG = false;
+            }
             if(dlf.TITLE_FLAG){
-                title += notes[j];
+                title += notes[j] + "\n";
             }
 
-            if(notes[j].contains("</CONTENT>")) dlf.CONTENT_FLAG = false;
+            if(notes[j].contains("</CONTENT>")) {
+                if(content.length() > 0)
+                    content = content.substring(0, content.length()-1);
+                dlf.CONTENT_FLAG = false;
+            }
             if(dlf.CONTENT_FLAG){
-                content += notes[j];
+                content += notes[j] + "\n";
             }
             if(notes[j].contains("<TITLE>")) {dlf.TITLE_FLAG = true;}
             if(notes[j].contains("<CONTENT>")) {dlf.CONTENT_FLAG = true;}

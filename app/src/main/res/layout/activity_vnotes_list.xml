@@ -10,6 +10,6 @@
         android:id="@+id/listView"
         android:touchscreenBlocksFocus="false"
         android:textFilterEnabled="false"
-        android:background="#fffff5b6" />
+        android:background="#32afafaf" />
 
 </LinearLayout>

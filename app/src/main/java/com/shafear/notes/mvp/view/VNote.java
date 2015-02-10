@@ -25,6 +25,7 @@ public class VNote extends ActionBarActivity {
         contentTextView.setText(xNote.getContent());
         contentTextView.setMovementMethod(new ScrollingMovementMethod());
         titleTextView.setMovementMethod(new ScrollingMovementMethod());
+        VAddLib.setColorForActionBarTitleText(this, "#edc437", getString(R.string.title_activity_vnote));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.shafear.notes.mvp.view;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,7 @@ public class VNotesList extends ActionBarActivity {
         setContentView(R.layout.activity_vnotes_list);
         pShowNotes = new PShowNotes();
         setListViewOfNotes();
+        VAddLib.setColorForActionBarTitleText(this, "#edc437", getString(R.string.title_activity_vlista_notatek));
     }
 
     @Override
@@ -59,5 +61,9 @@ public class VNotesList extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
+        Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(startMain);
     }
 }
